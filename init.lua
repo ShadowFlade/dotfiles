@@ -1,1 +1,0 @@
-/home/shadowflade/.config/nvim/init.lua
