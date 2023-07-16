@@ -21,8 +21,10 @@ return require('packer').startup(function(use)
 	use ('nvim-treesitter/playground')
 	use ("theprimeagen/harpoon")
 	use ("mbbill/undotree")
-
+    use ('neovim/nvim-lspconfig')
 	use ("tpope/vim-fugitive")
+    use ('L3MON4D3/LuaSnip')
+    use ('saadparwaiz1/cmp_luasnip')
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
@@ -45,6 +47,13 @@ return require('packer').startup(function(use)
 	
 }
 use ('ThePrimeagen/vim-be-good')
+ use ({
+    'nvimdev/lspsaga.nvim',
+    after = 'nvim-lspconfig',
+    config = function()
+        require('lspsaga').setup({})
+    end,
+}) 
 use {
     'chipsenkbeil/distant.nvim',
     branch = 'v0.2',
