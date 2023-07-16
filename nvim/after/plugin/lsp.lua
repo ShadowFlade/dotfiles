@@ -77,7 +77,7 @@ lspConfig.lua_ls.setup {
     },
   }
 }
-
+lspConfig.tsserver.setup{}
 lspConfig.solargraph.setup {
   capabilities = capabilities,
 }
