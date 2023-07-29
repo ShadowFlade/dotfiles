@@ -67,6 +67,7 @@ use {
         }
     end
 }
+use('MunifTanjim/prettier.nvim')
 end)
 
 
