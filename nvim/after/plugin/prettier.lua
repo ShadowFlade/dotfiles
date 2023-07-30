@@ -1,7 +1,7 @@
 local prettier = require("prettier")
 
 prettier.setup({
-    bin = 'prettier', -- or `'prettierd'` (v0.23.3+)
+    bin = 'prettierd', -- or `'prettierd'` (v0.23.3+)
     filetypes = {
         "css",
         "graphql",
@@ -15,8 +15,9 @@ prettier.setup({
         "typescript",
         "typescriptreact",
         "yaml",
+        "lua"
     },
-    cli_options = {
+    cli_options= {
         arrow_parens = "always",
         bracket_spacing = true,
         bracket_same_line = true,
