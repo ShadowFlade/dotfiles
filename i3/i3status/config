@@ -1,0 +1,21 @@
+#see "man i3status" for documentation
+
+general {
+	colors = true
+	interval = 5
+	}
+order += "disk /"
+order += "load"
+order += "tztime local"
+
+tztime local {
+	format = "%Y-%m_%d %H:%M:%S"
+	}
+
+load {
+	format = "%1min"
+}
+
+disk "/" {
+	format = %avail"
+}
