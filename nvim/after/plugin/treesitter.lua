@@ -39,6 +39,8 @@ require'nvim-treesitter.configs'.setup {
         "html",
         "scss",
         "lua",
+        "javascript",
+        "typescript"
     },
 }
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()

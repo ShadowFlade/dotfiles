@@ -1,5 +1,6 @@
 local masonLspConfig = require("mason-lspconfig")
 masonLspConfig.setup()
+vim.lsp.set_log_level("debug");
 local mason = require('mason')
 mason.setup()
 local lspSaga = require('lspsaga')
@@ -120,17 +121,18 @@ lspConfig.diagnosticls.setup {
     --  },
     --},
     filetypes = {
+
       javascript = 'eslint',
       javascriptreact = 'eslint',
       typescript = 'eslint',
       typescriptreact = 'eslint',
     },
     formatters = {
-  --    eslint_d = {
-  --      command = 'eslint_d',
-  --      args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
-  --      rootPatterns = { '.git' },
-  --    },
+      eslint_d = {
+        command = 'eslint_d',
+        args = { 'stdin', 'stdin-filename', '%filename', 'fix-to-stdout' },
+        rootPatterns = { '.git' },
+      },
       prettier = {
         command = 'prettier',
         args = { '--stdin-filepath', '%filename' }
@@ -138,8 +140,8 @@ lspConfig.diagnosticls.setup {
     },
     formatFiletypes = {
       css = 'prettier',
- --     javascript = 'eslint_d',
---      javascriptreact = 'eslint_d',
+     -- javascript = 'eslint_d',
+    -- javascriptreact = 'eslint_d',
       scss = 'prettier',
       less = 'prettier',
       typescript = 'eslint_d',
