@@ -30,7 +30,7 @@ for_window [class="^.*"] client.focused #77dd77 #285577 #ffffff #2e9ef4   #28557
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id picom
-
+exec --no-startup-id nvidia-settings --load-only-config
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -128,8 +128,8 @@ set $ws10 "browser"
 
 #monitors
 #set $monitor_left eDP-1
-set $monitor_right HDMI-1
-#set $monitor_left HDMI-1
+set $monitor_right HDMI-0
+set $monitor_left HDMI-1
 #set $monitor_right eDP-1
 
 workspace $ws1 output $monitor_left
@@ -269,5 +269,4 @@ exec --no-startup-id i3-msg 'workspace 3; exec alacritty -e bash; workspace 1'
 exec_always "setxkbmap -model pc105 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
 exec_always xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off
 exec_always feh --bg-fill --randomize ~/Pictures/wallpaper/*
-#if[date +%d==06]
-#then exec $renewPhpstomrEvaluationPeriod
+#we have to reload i3 for 2 monitors to work together
