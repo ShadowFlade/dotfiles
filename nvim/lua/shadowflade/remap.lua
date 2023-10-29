@@ -3,8 +3,9 @@ vim.keymap.set("n","<leader>pv",vim.cmd.Ex)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- delete line? 
+-- move line below to the end of current line 
 vim.keymap.set("n", "J", "mzJ`z")
+-- move up and down
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
@@ -17,12 +18,12 @@ end)
 vim.keymap.set("n", "<leader>svwm", function()
     require("vim-with-me").StopVimWithMe()
 end)
--- greatest remap ever
+-- pastes text in buffer into the next paragraph
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- copies into outer buffer
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
--- not sure what this does
+-- copies line into buffer
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- not sure what this does either
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
@@ -49,4 +50,6 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
+vim.api.nvim_set_keymap("n", "<Leader>nf", ":lua require('neogen').generate()<CR>", 
+        {noremap = true, silent = true})
 end)
