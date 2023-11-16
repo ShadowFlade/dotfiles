@@ -8,8 +8,7 @@ local lspConfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local on_attach = function(client, bufnr)
-
-    local opts = {buffer = bufnr, remap = false}
+    local opts = { buffer = bufnr, remap = false }
 
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
@@ -31,124 +30,124 @@ end
 
 
 lspSaga.setup({
-  code_action_icon = "💡",
-  symbol_in_winbar = {
-    in_custom = false,
-    enable = false,
-    separator = ' ',
-    show_file = false,
-    file_formatter = ""
-  },
+    code_action_icon = "💡",
+    symbol_in_winbar = {
+        in_custom = false,
+        enable = false,
+        separator = ' ',
+        show_file = false,
+        file_formatter = ""
+    },
 })
 
 vim.keymap.set("n", "gd", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
 vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<cr>', { silent = true })
-vim.keymap.set({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
 vim.keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", { silent = true })
 
 lspConfig.emmet_language_server.setup({
-  filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
-  init_options = {
-    --- @type table<string, any> https://docs.emmet.io/customization/preferences/
-    preferences = {},
-    --- @type "always" | "never" defaults to `"always"`
-    showexpandedabbreviation = "always",
-    --- @type boolean defaults to `true`
-    showabbreviationsuggestions = true,
-    --- @type boolean defaults to `false`
-    showsuggestionsassnippets = false,
-    --- @type table<string, any> https://docs.emmet.io/customization/syntax-profiles/
-    syntaxprofiles = {},
-    --- @type table<string, string> https://docs.emmet.io/customization/snippets/#variables
-    variables = {},
-    --- @type string[]
-    excludelanguages = {},
-  },
+    filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug",
+        "typescriptreact", "vue" },
+    init_options = {
+        --- @type table<string, any> https://docs.emmet.io/customization/preferences/
+        preferences = {},
+        --- @type "always" | "never" defaults to `"always"`
+        showexpandedabbreviation = "always",
+        --- @type boolean defaults to `true`
+        showabbreviationsuggestions = true,
+        --- @type boolean defaults to `false`
+        showsuggestionsassnippets = false,
+        --- @type table<string, any> https://docs.emmet.io/customization/syntax-profiles/
+        syntaxprofiles = {},
+        --- @type table<string, string> https://docs.emmet.io/customization/snippets/#variables
+        variables = {},
+        --- @type string[]
+        excludelanguages = {},
+    },
 })
 lspConfig.lua_ls.setup {
-  capabilities = capabilities,
+    capabilities = capabilities,
 
-  on_attach = on_attach,
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { "vim" },
-      },
-      workspace = {
-        library = {
-          [vim.fn.expand "$VIMRUNTIME/lua"] = true,
-          [vim.fn.stdpath "config" .. "/lua"] = true,
+    on_attach = on_attach,
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { "vim" },
+            },
+            workspace = {
+                library = {
+                    [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+                    [vim.fn.stdpath "config" .. "/lua"] = true,
+                },
+            },
         },
-      },
-    },
-  }
+    }
 }
-lspConfig.tsserver.setup{}
+lspConfig.tsserver.setup {}
 lspConfig.solargraph.setup {
-  capabilities = capabilities,
+    capabilities = capabilities,
 }
 
 lspConfig.pyright.setup {
-  capabilities = capabilities,
+    capabilities = capabilities,
 }
 vim.diagnostic.config({
-	virtual_text = true
+    virtual_text = true
 })
 lspConfig.diagnosticls.setup {
-  on_attach = on_attach,
-  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'markdown', 'pandoc' },
-  init_options = {
-    --linters = {
-    --  eslint = {
-    --    command = 'eslint_d',
-    --    rootPatterns = { '.git' },
-    --    debounce = 100,
-    --    args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
-    --    sourceName = 'eslint_d',
-    --    parseJson = {
-    --      errorsRoot = '[0].messages',
-    --      line = 'line',
-    --      column = 'column',
-    --      endLine = 'endLine',
-    --      endColumn = 'endColumn',
-    --      message = '[eslint] ${message} [${ruleId}]',
-    --      security = 'severity'
-    --    },
-    --    securities = {
-    --      [2] = 'error',
-    --      [1] = 'warning'
-    --    }
-    --  },
-    --},
-    filetypes = {
-
-      javascript = 'eslint',
-      javascriptreact = 'eslint',
-      typescript = 'eslint',
-      typescriptreact = 'eslint',
-    },
-    formatters = {
-      eslint_d = {
-        command = 'eslint_d',
-        args = { 'stdin', 'stdin-filename', '%filename', 'fix-to-stdout' },
-        rootPatterns = { '.git' },
-      },
-      prettier = {
-        command = 'prettier',
-        args = { '--stdin-filepath', '%filename' }
-      }
-    },
-    formatFiletypes = {
-      css = 'prettier',
-     -- javascript = 'eslint_d',
-    -- javascriptreact = 'eslint_d',
-      scss = 'prettier',
-      less = 'prettier',
-      typescript = 'eslint_d',
-      typescriptreact = 'eslint_d',
-      json = 'prettier',
-      markdown = 'prettier',
+    on_attach = on_attach,
+    filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss',
+        'markdown', 'pandoc' },
+    init_options = {
+        --linters = {
+        --  eslint = {
+        --    command = 'eslint_d',
+        --    rootPatterns = { '.git' },
+        --    debounce = 100,
+        --    args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
+        --    sourceName = 'eslint_d',
+        --    parseJson = {
+        --      errorsRoot = '[0].messages',
+        --      line = 'line',
+        --      column = 'column',
+        --      endLine = 'endLine',
+        --      endColumn = 'endColumn',
+        --      message = '[eslint] ${message} [${ruleId}]',
+        --      security = 'severity'
+        --    },
+        --    securities = {
+        --      [2] = 'error',
+        --      [1] = 'warning'
+        --    }
+        --  },
+        --},
+        filetypes = {
+            javascript = 'eslint',
+            javascriptreact = 'eslint',
+            typescript = 'eslint',
+            typescriptreact = 'eslint',
+        },
+        formatters = {
+            eslint_d = {
+                command = 'eslint_d',
+                args = { 'stdin', 'stdin-filename', '%filename', 'fix-to-stdout' },
+                rootPatterns = { '.git' },
+            },
+            prettier = {
+                command = 'prettierd',
+                args = { '--stdin-filepath', '%filename' }
+            }
+        },
+        formatFiletypes = {
+            css = 'prettier',
+            javascript = 'prettierd',
+            javascriptreact = 'prettier',
+            scss = 'prettier',
+            less = 'prettier',
+            typescript = 'eslint_d',
+            typescriptreact = 'eslint_d',
+            json = 'prettier',
+            markdown = 'prettier',
+        }
     }
-  }
 }
-
