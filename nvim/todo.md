@@ -1,1 +1,2 @@
 - configure prettier without null-ls (feels kinda heave rn)
+- map so that after * in centers on the screen
