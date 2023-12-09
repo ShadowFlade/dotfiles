@@ -47,7 +47,7 @@ vim.keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", { silent = true })
 
 lspConfig.emmet_language_server.setup({
     filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug",
-        "typescriptreact", "vue" },
+        "typescriptreact", "vue",'markdown','markdown_inline','typescript' },
     init_options = {
         --- @type table<string, any> https://docs.emmet.io/customization/preferences/
         preferences = {},

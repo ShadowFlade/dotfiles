@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    selected=$(find ~/Desktop/personal ~/Desktop/work/ ~/Desktop/personal/projects ~/ -mindepth 1 -maxdepth 3 -type d | fzf)
+fi
+if [[ -z $selected ]]; then
+    echo 'exit'
+    exit 0
+fi
+
+selected_name="$(basename $(dirname $selected | tr . _))_$(basename "$selected" | tr . _)"
+tmux_running=$(pgrep tmux)
+# create session if it doesnt exist
+if [[ $selected_name != 0 &&  ! $(tmux has-session -t $selected_name 2> /dev/null) ]];then
+    TMUX='' tmux new-session -d -s "$selected_name" -c "$selected"
+fi
+
+# 3. Attach if outside of tmux, switch if you're in tmux.
+if [[ -z "$TMUX" ]]; then
+    tmux attach -t "$selected_name"
+else
+    tmux switch-client -t "$selected_name"
+fi
+
