@@ -34,8 +34,9 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
 -- TODO set my own tmux hotkey
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<C-e>", "<cmd>silent !tmux choose-session<CR>")
 --vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-vim.keymap.set("n", "=", ":Prettier<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>=", ":Prettier<CR>", { noremap = true, silent = true })
 --next/prev error
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")

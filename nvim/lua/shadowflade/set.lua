@@ -32,7 +32,7 @@ vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 vim.g.textWidth = 80;
-
+vim.opt.ignorecase = true
 vim.opt.listchars:append({precedes  = '>'})
 
 --print(vim.inspect(vim.opt.listchars))
