@@ -103,3 +103,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $ZSH_CUSTOM/aliases.zsh
+source $ZSH_CUSTOM/custom.zsh
+
