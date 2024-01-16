@@ -29,8 +29,8 @@ for_window [class="^.*"] client.focused #77dd77 #285577 #ffffff #2e9ef4   #28557
 # screen before suspend. Use loginctl lock-session to lock your screen.
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id picom
-exec --no-startup-id nvidia-settings --load-only-config
+exec --no-startup-id picom 
+ exec --no-startup-id nvidia-settings --load-only-config
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -48,9 +48,8 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec "./new_instnc_term_curr_dir"
-#moving away from alacritty for now, im too stupid to understand to set set transparency there
-bindsym $mod+Return exec i3-sensible-terminal
-
+# for some reason on my laptop picom does not work from start
+bindsym $mod+Return exec alacritty && picom
 # kill focused window
 bindsym $mod+q kill
 
