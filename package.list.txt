@@ -1,0 +1,24 @@
+apt: 
+git
+telegram-desktop
+snapd
+# we cant install snap untill making this command
+sudo mv /etc/apt/preferences.d/nosnap.pref /etc/apt/preferences.d/nosnap.pref.disabled
+i3
+sudo add-apt-repository ppa:appimagelauncher-team/stable
+sudo apt-get update
+sudo apt-get install appimagelauncher
+brightnessctl
+zsh
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+zsh should be at ~/.oh-my-zsh
+picom
+feh
+tmux
+(for nvim you need to install applauncher and download appimage v0.9
+
+
+
+
+
+snap:
