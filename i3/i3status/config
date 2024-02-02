@@ -17,5 +17,10 @@ load {
 }
 
 disk "/" {
-	format = %avail"
+	format = "avail %avail"
+}
+
+tztime berlin {
+        format = "%Y-%m-%d %H:%M:%S %Z"
+        timezone = "Europe/Berlin"
 }

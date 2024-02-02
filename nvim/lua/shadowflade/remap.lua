@@ -56,5 +56,5 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.api.nvim_set_keymap("n", "<Leader>nf", ":lua require('neogen').generate()<CR>",
         { noremap = true, silent = true })
 end)
-
+vim.keymap.set("n","<leader>e",":lua vim.diagnostic.open_float(0, {scope='line'})<CR>", { noremap = true, silent = true}) 
 --vim.keymap.set("n", "=", ":Prettier<CR>", { noremap = true, silent = true })
