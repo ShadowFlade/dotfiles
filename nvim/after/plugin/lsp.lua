@@ -20,12 +20,12 @@ local on_attach = function(client, bufnr)
     vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-    if client.resolved_capabilities.document_formatting then
-        vim.api.nvim_command [[augroup Format]]
-        vim.api.nvim_command [[autocmd! * <buffer>]]
-        vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-        vim.api.nvim_command [[augroup END]]
-    end
+    --if client.resolved_capabilities.document_formatting then
+    --    vim.api.nvim_command [[augroup Format]]
+    --    vim.api.nvim_command [[autocmd! * <buffer>]]
+    --    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+    --    vim.api.nvim_command [[augroup END]]
+    --end
 end
 
 
@@ -90,6 +90,21 @@ lspConfig.solargraph.setup {
 
 lspConfig.pyright.setup {
     capabilities = capabilities,
+}
+lspConfig.gopls.setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    filetypes = {'go','gomod','gowork','gotmpl'},
+    cmd = {"gopls"},
+    settings = {
+        gopls = {
+            completeUnimported = true,
+            usePlaceholders = true,
+            analyses = {
+                unusedparams = true
+            }
+        }
+    }
 }
 vim.diagnostic.config({
     virtual_text = true
