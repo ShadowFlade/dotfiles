@@ -5,7 +5,6 @@ else
     selected=$(find ~/Desktop/personal ~/Desktop/work/ ~/Desktop/personal/projects ~/ -mindepth 1 -maxdepth 3 -type d | fzf)
 fi
 if [[ -z $selected ]]; then
-    echo 'exit'
     exit 0
 fi
 

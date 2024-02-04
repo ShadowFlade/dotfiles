@@ -12,6 +12,7 @@ export NVM_DIR="/home/shadowflade/.nvm"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # cool themes=("")
 ZSH_THEME="random"
+source ~/.bash_profile
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
