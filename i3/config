@@ -242,7 +242,9 @@ bindsym $mod+z move container to output eDP-1
 bindsym $mod+shift+x exec $i3lockwall
 bindsym $mod+Shift+e exec nemo ~/Desktop
 bindsym Print exec "flameshot screen -p /home/shadowflade/Pictures"
+ 
 bindsym shift+Print exec "flameshot gui"
+bindsym Ctrl+Print exec "normcap"
 bindsym $mod+Shift+V exec /usr/bin/diodon
 # shutdown / restart / suspend...
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown

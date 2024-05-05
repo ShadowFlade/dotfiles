@@ -14,7 +14,8 @@ export NVM_DIR="/home/shadowflade/.nvm"
 ZSH_THEME="random"
 export PATH=$PATH:/usr/local/go/
 export PATH="/usr/local/go/bin/golines:$PATH"
-export GOPATH=/usr/local/go/bin
+export GOPATH=/usr/local/go/
+export PATH="$GOPATH:/usr/local/go/bin:$PATH"
 source ~/.bash_profile
 
 # Set list of themes to pick from when loading at random

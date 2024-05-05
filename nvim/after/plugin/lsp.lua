@@ -106,13 +106,20 @@ lspConfig.gopls.setup {
         }
     }
 }
+
+lspConfig.html.setup {
+    capabilities = capabilities,
+}
+
+lspConfig.htmx.setup {}
+lspConfig['htmx-lsp'].setup{}
 vim.diagnostic.config({
     virtual_text = true
 })
 lspConfig.diagnosticls.setup {
     on_attach = on_attach,
     filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss',
-        'markdown', 'pandoc' },
+        'markdown', 'pandoc', 'html' },
     init_options = {
         --linters = {
         --  eslint = {
