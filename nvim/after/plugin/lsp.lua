@@ -1,6 +1,5 @@
 local masonLspConfig = require("mason-lspconfig")
 masonLspConfig.setup()
-vim.lsp.set_log_level("debug");
 local mason = require('mason')
 mason.setup()
 local lspSaga = require('lspsaga')
@@ -65,6 +64,7 @@ lspConfig.emmet_language_server.setup({
         excludelanguages = {},
     },
 })
+
 lspConfig.lua_ls.setup {
     capabilities = capabilities,
 
@@ -83,7 +83,9 @@ lspConfig.lua_ls.setup {
         },
     }
 }
+
 lspConfig.tsserver.setup {}
+
 lspConfig.solargraph.setup {
     capabilities = capabilities,
 }
@@ -111,11 +113,15 @@ lspConfig.html.setup {
     capabilities = capabilities,
 }
 
-lspConfig.htmx.setup {}
+lspConfig.htmx.setup {
+    capabilities = capabilities
+}
+
 lspConfig['htmx-lsp'].setup{}
 vim.diagnostic.config({
     virtual_text = true
 })
+
 lspConfig.diagnosticls.setup {
     on_attach = on_attach,
     filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss',
@@ -161,7 +167,7 @@ lspConfig.diagnosticls.setup {
             }
         },
         formatFiletypes = {
-            css = 'prettier',
+            css = 'prettierd',
             javascript = 'prettierd',
             javascriptreact = 'prettier',
             scss = 'prettier',
