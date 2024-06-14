@@ -59,4 +59,4 @@ end)
 vim.keymap.set("n", "<leader>e", ":lua vim.diagnostic.open_float(0, {scope='line'})<CR>",
     { noremap = true, silent = true })
 --vim.keymap.set("n", "=", ":Prettier<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>ca", ":Lspsaga code_action", { noremap = true, silent = true })
+

@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
-let g:netrw_dirhist_3='/home/shadowflade/Downloads'
-let g:netrw_dirhist_2='/home/shadowflade/nvim'
-let g:netrw_dirhist_1='/home/shadowflade/Desktop/code/hebe_clone'
