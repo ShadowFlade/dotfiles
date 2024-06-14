@@ -29,8 +29,8 @@ for_window [class="^.*"] client.focused #77dd77 #285577 #ffffff #2e9ef4   #28557
 # screen before suspend. Use loginctl lock-session to lock your screen.
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id picom
-exec --no-startup-id nvidia-settings --load-only-config
+exec_always --no-startup-id picom
+exec_always --no-startup-id nvidia-settings --load-only-config
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -270,6 +270,6 @@ exec nvim ~/Desktop/personal/
 exec --no-startup-id i3-msg 'workspace 3; exec alacritty -e bash; workspace 1'
 exec_always "setxkbmap -model pc105 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
 exec_always xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off
-exec_always feh --bg-fill --randomize ~/Pictures/wallpaper/*
+exec_always feh --bg-fill --randomize ~/Pictures/personal/wallpaper/*
 exec /usr/bin/diodon
 #we have to reload i3 for 2 monitors to work together

@@ -2,3 +2,5 @@ nvim/plugin/packer_compiled.lua
 i3/config.dpkg-dist
 i3/config.keycodes
 nvim/nvim.appimage*
+nvim/lazy-lock.json
+
