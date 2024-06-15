@@ -34,5 +34,6 @@ vim.g.mapleader = " "
 vim.g.textWidth = 80;
 vim.opt.ignorecase = true
 vim.opt.listchars:append({precedes  = '>'})
-
+vim.opt.verbose = 9;
+vim.opt.verbosefile = "/tmp/neovim_debug.txt"
 --print(vim.inspect(vim.opt.listchars))

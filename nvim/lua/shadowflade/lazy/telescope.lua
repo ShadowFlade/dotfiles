@@ -1,13 +1,25 @@
 return {
     "nvim-telescope/telescope.nvim",
 
-
     dependencies = {
-        "nvim-lua/plenary.nvim"
+        "nvim-lua/plenary.nvim",
+        "nvim-lua/popup.nvim",
+        "nvim-telescope/telescope-media-files.nvim",
     },
 
+
     config = function()
-        require('telescope').setup({})
+        require('telescope').setup {
+            extensions = {
+                media_files = {
+                    -- filetypes whitelist
+                    -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+                    filetypes = { "png", "webp", "jpg", "jpeg" },
+                    -- find command (defaults to `fd`)
+                    find_cmd = "rg"
+                }
+            },
+        }
 
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
@@ -24,5 +36,7 @@ return {
             builtin.grep_string({ search = vim.fn.input("Grep > ") })
         end)
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
+
+        vim.keymap.set('n', '<leader>img', ':Telescope media_files<CR>', {})
     end
 }
