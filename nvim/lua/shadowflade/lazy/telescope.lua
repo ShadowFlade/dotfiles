@@ -10,6 +10,7 @@ return {
 
     config = function()
         require('telescope').setup {
+            initial_mode = "normal",
             extensions = {
                 media_files = {
                     -- filetypes whitelist
@@ -22,6 +23,7 @@ return {
         }
 
         local builtin = require('telescope.builtin')
+        local media_files = require('telescope').extensions.media_files;
         vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
         vim.keymap.set('n', '<C-p>', builtin.git_files, {})
         vim.keymap.set('n', '<leader>pws', function()
@@ -37,6 +39,6 @@ return {
         end)
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
 
-        vim.keymap.set('n', '<leader>img', ':Telescope media_files<CR>', {})
+        vim.keymap.set('n', '<leader>img', media_files.media_files, {})
     end
 }

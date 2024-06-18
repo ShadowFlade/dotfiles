@@ -1,5 +1,5 @@
 vim.opt.guicursor = ""
-
+vim.opt.shell="/bin/zsh"
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -10,7 +10,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -34,6 +34,6 @@ vim.g.mapleader = " "
 vim.g.textWidth = 80;
 vim.opt.ignorecase = true
 vim.opt.listchars:append({precedes  = '>'})
-vim.opt.verbose = 9;
-vim.opt.verbosefile = "/tmp/neovim_debug.txt"
+--vim.opt.verbose = 9;
+--vim.opt.verbosefile = "/tmp/neovim_debug.txt"
 --print(vim.inspect(vim.opt.listchars))

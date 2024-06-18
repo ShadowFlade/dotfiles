@@ -53,10 +53,9 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
-    vim.api.nvim_set_keymap("n", "<Leader>nf", ":lua require('neogen').generate()<CR>",
-        { noremap = true, silent = true })
 end)
+vim.api.nvim_set_keymap("n", "<Leader>nf", ":lua require('neogen').generate()<CR>",
+    { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>e", ":lua vim.diagnostic.open_float(0, {scope='line'})<CR>",
     { noremap = true, silent = true })
 --vim.keymap.set("n", "=", ":Prettier<CR>", { noremap = true, silent = true })
-

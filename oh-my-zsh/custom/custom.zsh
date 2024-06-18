@@ -19,3 +19,11 @@ addToPathFront() {
         export PATH=$1:$PATH
     fi
 }
+
+blackout(){
+    picom-trans -c 100
+}
+
+opacity(){
+    picom-trans -c 90
+}
