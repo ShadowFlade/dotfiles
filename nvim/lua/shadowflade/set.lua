@@ -1,5 +1,5 @@
 vim.opt.guicursor = ""
-vim.opt.shell="/bin/zsh"
+vim.opt.shell = "/bin/zsh"
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -33,7 +33,13 @@ vim.opt.colorcolumn = "80"
 vim.g.mapleader = " "
 vim.g.textWidth = 80;
 vim.opt.ignorecase = true
-vim.opt.listchars:append({precedes  = '>'})
+vim.opt.listchars:append({ precedes = '>' })
 --vim.opt.verbose = 9;
 --vim.opt.verbosefile = "/tmp/neovim_debug.txt"
 --print(vim.inspect(vim.opt.listchars))
+--
+--
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.opt.termguicolors = true
