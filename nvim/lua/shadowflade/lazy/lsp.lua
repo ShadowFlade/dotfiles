@@ -28,10 +28,10 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "tsserver",
+                "phpactor",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
-
                     require("lspconfig")[server_name].setup {
                         capabilities = capabilities
                     }
@@ -71,8 +71,8 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' }, -- For luasnip users.
             }, {
-                    { name = 'buffer' },
-                })
+                { name = 'buffer' },
+            })
         })
 
         vim.diagnostic.config({
@@ -86,5 +86,9 @@ return {
                 prefix = "",
             },
         })
+        -- i have no idea what this is and how its supposed to work (this one does not work btw)
+        vim.cmd [[
+             hi link @tag.attribute.html type
+        ]]
     end
 }

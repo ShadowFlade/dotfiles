@@ -6,7 +6,7 @@ return {
             -- A list of parser names, or "all"
             ensure_installed = {
                 "vimdoc", "javascript", "typescript", "c", "lua",
-                "jsdoc", "bash","go"
+                "jsdoc", "bash", "go"
             },
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -36,11 +36,20 @@ return {
         treesitter_parser_config.templ = {
             install_info = {
                 url = "https://github.com/vrischmann/tree-sitter-templ.git",
-                files = {"src/parser.c", "src/scanner.c"},
+                files = { "src/parser.c", "src/scanner.c" },
                 branch = "master",
             },
         }
+        treesitter_parser_config.blade = {
+            install_info = {
+                url = "https://github.com/EmranMR/tree-sitter-blade",
+                files = { "src/parser.c" },
+                branch = "main",
+            },
+            filetype = "*blade*"
+        }
 
         vim.treesitter.language.register("templ", "templ")
+        vim.treesitter.language.register("blade", "blade")
     end
 }

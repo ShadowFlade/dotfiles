@@ -20,7 +20,20 @@ return {
 
         vim.keymap.set("n", "<C-b>", "<cmd>Neotree toggle<CR>")
         require("neo-tree").setup({
-            close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
+            event_handlers = {
+
+                {
+                    event = "file_open_requested",
+                    handler = function()
+                        -- auto close
+                        -- vimc.cmd("Neotree close")
+                        -- OR
+                        require("neo-tree.command").execute({ action = "close" })
+                    end
+                },
+
+            },
+            close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
             popup_border_style = "rounded",
             enable_git_status = true,
             enable_diagnostics = true,
@@ -39,7 +52,7 @@ return {
                     enable_character_fade = true
                 },
                 indent = {
-                    indent_size = 2,
+                    indent_size = 4,
                     padding = 1, -- extra padding on left hand side
                     -- indent guides
                     with_markers = true,
@@ -112,7 +125,7 @@ return {
             commands = {},
             window = {
                 position = "left",
-                width = 40,
+                width = 200,
                 mapping_options = {
                     noremap = true,
                     nowait = true,
@@ -200,7 +213,7 @@ return {
                     },
                 },
                 follow_current_file = {
-                    enabled = false,                    -- This will find and focus the file in the active buffer every time
+                    enabled = true,                     -- This will find and focus the file in the active buffer every time
                     --               -- the current file is changed while the tree is open.
                     leave_dirs_open = false,            -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
                 },
@@ -292,6 +305,6 @@ return {
             }
         })
 
-        vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
+        --vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
     end
 }

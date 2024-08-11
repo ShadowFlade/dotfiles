@@ -43,6 +43,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+
+bindsym F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym F1 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -128,8 +132,8 @@ set $ws10 "browser"
 
 #monitors
 #set $monitor_left eDP-1
-set $monitor_right HDMI-0
-set $monitor_left HDMI-1
+set $monitor_right HDMI-1
+set $monitor_left HDMI-0
 #set $monitor_right eDP-1
 
 workspace $ws1 output $monitor_left
@@ -151,7 +155,7 @@ bindsym $mod+3 workspace  $ws3
 bindsym $mod+4 workspace  $ws4
 bindsym $mod+5 workspace  $ws5
 bindsym $mod+6 workspace  $ws6
-bindsym $mod+7 workspace number $ws7
+bindsym $mod+7 workspace  $ws7
 bindsym $mod+8 workspace  $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
@@ -199,9 +203,9 @@ mode "resize" {
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
     bindsym h resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym j resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym j resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -221,7 +225,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     status_command i3status
-    tray_output primary	
+    tray_output primary
     #postion top
 }
 
@@ -242,7 +246,7 @@ bindsym $mod+z move container to output eDP-1
 bindsym $mod+shift+x exec $i3lockwall
 bindsym $mod+Shift+e exec nemo ~/Desktop
 bindsym Print exec "flameshot screen -p /home/shadowflade/Pictures"
- 
+
 bindsym shift+Print exec "flameshot gui"
 bindsym Ctrl+Print exec "normcap"
 bindsym $mod+Shift+V exec /usr/bin/diodon
@@ -265,11 +269,12 @@ mode "$mode_system" {
 bindsym $mod+BackSpace mode "$mode_system"
 
 
-exec firefox 
+exec firefox
 exec nvim ~/Desktop/personal/
 exec --no-startup-id i3-msg 'workspace 3; exec alacritty -e bash; workspace 1'
 exec_always "setxkbmap -model pc105 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
 exec_always xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off
 exec_always feh --bg-fill --randomize ~/Pictures/personal/wallpaper/*
 exec /usr/bin/diodon
+exec --no-startup-id xset s 10800 dpms 10800 10800 10800
 #we have to reload i3 for 2 monitors to work together
