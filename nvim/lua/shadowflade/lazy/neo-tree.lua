@@ -21,7 +21,6 @@ return {
         vim.keymap.set("n", "<C-b>", "<cmd>Neotree toggle float<CR>")
         require("neo-tree").setup({
             event_handlers = {
-
                 {
                     event = "file_open_requested",
                     handler = function()
@@ -31,7 +30,6 @@ return {
                         require("neo-tree.command").execute({ action = "close" })
                     end
                 },
-
             },
             close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
             popup_border_style = "rounded",
@@ -124,7 +122,7 @@ return {
             -- see `:h neo-tree-custom-commands-global`
             commands = {},
             window = {
-                position = "left",
+                position = "float",
                 width = 200,
                 mapping_options = {
                     noremap = true,
