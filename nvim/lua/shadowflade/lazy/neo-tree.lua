@@ -18,7 +18,7 @@ return {
         vim.fn.sign_define("DiagnosticSignHint",
             { text = "󰌵", texthl = "DiagnosticSignHint" })
 
-        vim.keymap.set("n", "<C-b>", "<cmd>Neotree toggle<CR>")
+        vim.keymap.set("n", "<C-b>", "<cmd>Neotree toggle float<CR>")
         require("neo-tree").setup({
             event_handlers = {
 
@@ -230,7 +230,7 @@ return {
                         ["<bs>"] = "navigate_up",
                         ["."] = "set_root",
                         ["H"] = "toggle_hidden",
-                        ["/"] = "fuzzy_finder",
+                        ["/"] = "noop",
                         ["D"] = "fuzzy_finder_directory",
                         ["#"] = "fuzzy_sorter", -- fuzzy sorting using the fzy algorithm
                         -- ["D"] = "fuzzy_sorter_directory",

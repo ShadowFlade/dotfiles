@@ -5,7 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export NVM_DIR="/home/shadowflade/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -17,7 +17,8 @@ export PATH="/usr/local/go/bin/golines:$PATH"
 export GOPATH=/usr/local/go/
 export PATH="$GOPATH:/usr/local/go/bin:$PATH"
 source ~/.bash_profile
-
+export GOLAND="/home/shadowflade/Downloads/GoLand-2024.2/bin"
+export PATH="$GOLAND:$PATH"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
