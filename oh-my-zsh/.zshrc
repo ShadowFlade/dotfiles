@@ -66,3 +66,5 @@ source $ZSH/oh-my-zsh.sh
 source $ZSH_CUSTOM/custom.zsh
 source $ZSH_CUSTOM/aliases.zsh
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

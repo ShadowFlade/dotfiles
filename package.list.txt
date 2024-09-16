@@ -1,4 +1,4 @@
-apt: 
+apt:
 git
 telegram-desktop
 snapd
@@ -15,7 +15,8 @@ zsh should be at ~/.oh-my-zsh
 picom
 feh
 tmux
-(for nvim you need to install applauncher and download appimage v0.9
+nectos/act
+(for nvim you need to install applauncher and download appimage v0.9 - or just build from source like a man
 
 
 

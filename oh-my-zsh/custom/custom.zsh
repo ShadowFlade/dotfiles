@@ -13,7 +13,6 @@ cdf() {
   cd "$(dirname "$selected_dir")"
 }
 bindkey -s ^f "tmux-sessionizer\n"
-
 addToPathFront() {
     if [[ "$PATH" != *"$1"* ]]; then
         export PATH=$1:$PATH
