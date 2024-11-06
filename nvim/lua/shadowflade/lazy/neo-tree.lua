@@ -19,6 +19,7 @@ return {
             { text = "󰌵", texthl = "DiagnosticSignHint" })
 
         vim.keymap.set("n", "<C-b>", "<cmd>Neotree toggle float<CR>")
+        vim.keymap.set("n", "<C-b>", "<cmd>Neotree reveal<CR>")
         require("neo-tree").setup({
             event_handlers = {
                 {
