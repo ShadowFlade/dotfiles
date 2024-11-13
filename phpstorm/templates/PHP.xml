@@ -1,14 +1,14 @@
 <templateSet group="PHP">
-<template name="log" value="echo "<pre>"; print_r($VAR$ . "\n"); echo "<pre/><br/>";" description="" toReformat="false" toShortenFQNames="true">
-<variable name="VAR" expression="" defaultValue="" alwaysStopAt="true"/>
-<context>
-<option name="PHP" value="true"/>
-</context>
-</template>
-<template name="debug" value="\Bitrix\Main\Diag\Debug::writeToFile($VAR$, date("d.m.Y H:i:s"), "local/log.log"); " description="" toReformat="true" toShortenFQNames="true">
-<variable name="VAR" expression="" defaultValue="" alwaysStopAt="true"/>
-<context>
-<option name="PHP" value="true"/>
-</context>
-</template>
+  <template name="log" value="echo &quot;&lt;pre&gt;&quot;;&#10;print_r($VAR$) . &quot;\n&quot;;&#10;echo &quot;&lt;pre/&gt;&lt;br/&gt;&quot;;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="debug" value="\Bitrix\Main\Diag\Debug::writeToFile($VAR$, date(&quot;d.m.Y H:i:s&quot;), &quot;local/log.log&quot;);&#10;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>

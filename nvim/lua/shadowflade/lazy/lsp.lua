@@ -12,7 +12,13 @@ return {
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
     },
+    opts = {
+        inlay_hints = { enabled = true },
+    },
 
+    on_attach = function(client, bufnr)
+        vim.lsp.buf.inlay_hint(bufnr, true)
+    end,
     config = function()
         local cmp = require('cmp')
         local cmp_lsp = require("cmp_nvim_lsp")
@@ -20,14 +26,14 @@ return {
             "force",
             {},
             vim.lsp.protocol.make_client_capabilities(),
-            cmp_lsp.default_capabilities())
+            cmp_lsp.default_capabilities()
+        )
 
         require("fidget").setup({})
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
-                "tsserver",
                 "phpactor",
             },
             handlers = {
@@ -85,6 +91,7 @@ return {
                 header = "",
                 prefix = "",
             },
+
         })
         -- i have no idea what this is and how its supposed to work (this one does not work btw)
         vim.cmd [[
