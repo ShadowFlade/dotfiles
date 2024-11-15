@@ -4,3 +4,4 @@ i3/config.keycodes
 nvim/nvim.appimage*
 nvim/lazy-lock.json
 *.AppImage
+*log
