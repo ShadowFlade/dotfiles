@@ -19,6 +19,10 @@ export PATH="$GOPATH:/usr/local/go/bin:$PATH"
 source ~/.bash_profile
 export GOLAND="/home/shadowflade/Downloads/GoLand-2024.2/bin"
 export PATH="$GOLAND:$PATH"
+export PATH=~/.composer/vendor/bin:$PATH
+export PATH=/usr/local/bin/composer/:$PATH
+export PATH=/home/shadowflade/.config/composer/vendor/laravel/installer/bin:$PATH
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/

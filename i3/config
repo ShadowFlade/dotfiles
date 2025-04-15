@@ -274,7 +274,7 @@ mode "$mode_system" {
 bindsym $mod+BackSpace mode "$mode_system"
 
 
-exec firefox
+exec firefox-aurora
 exec nvim ~/Desktop/personal/
 exec --no-startup-id i3-msg 'workspace 3; exec alacritty -e bash; workspace 1'
 exec_always "setxkbmap -model pc105 -layout us,ru -variant ,, -option grp:alt_shift_toggle"

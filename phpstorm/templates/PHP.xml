@@ -5,7 +5,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="debug" value="\Bitrix\Main\Diag\Debug::writeToFile($VAR$, date(&quot;d.m.Y H:i:s&quot;), &quot;local/log.log&quot;);&#10;" description="" toReformat="true" toShortenFQNames="true">
+  <template name="debug" value="\Bitrix\Main\Diag\Debug::writeToFile(&#10;    $VAR$,&#10;    date(&quot;d.m.Y H:i:s&quot;),&#10;    &quot;local/log.log&quot;&#10;);&#10;" description="" toReformat="true" toShortenFQNames="true">
     <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
