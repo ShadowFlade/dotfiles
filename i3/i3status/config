@@ -51,7 +51,7 @@ memory {
 }
 
 tztime local {
-        format = "%d-%m-%Y %H:%M:%S"
+        format = "%m-%d-%Y %H:%M:%S"
 }
 volume master {
     format = " %volume" # шаблон громкости в активном состоянии

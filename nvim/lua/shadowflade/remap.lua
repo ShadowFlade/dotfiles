@@ -60,7 +60,8 @@ vim.keymap.set("n", "<leader>e", ":lua vim.diagnostic.open_float(0, {scope='line
     { noremap = true, silent = true })
 --vim.keymap.set("n", "=", ":Prettier<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-b>", "");
-vim.keymap.set("n", "<C-S-t>", ":tabnew <CR>");
+vim.keymap.set("n", "<C-t>", "<cmd>tabnew <CR>");
+vim.keymap.set("n", "<leader>w", "<cmd>tabclose <CR>");
 vim.keymap.set("n", "<leader>fu", function()
     local word = vim.fn.expand('<cword>')
     vim.cmd('execute "vimgrep /' .. word .. '/ **/*"')
