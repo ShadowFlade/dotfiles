@@ -2,7 +2,7 @@ weather(){
 	curl "wttr.in/$1"
 }
 bindkey -s ^f "~/.local/bin/scripts/tmux-sessionizer\n"
-bindkey -s ^p "~/.local/bin/scripts/tmux-sessionizer ~/Desktop/personal/projects/pintereset_clone \n"
+#bindkey -s ^p "~/.local/bin/scripts/tmux-sessionizer ~/Desktop/personal/projects/pintereset_clone \n"
 cdf() {
   if [ -n "$1" ] && [ -d "$1" ]; then
     cd "$1"

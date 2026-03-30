@@ -1,4 +1,7 @@
 return {
+    { import = "shadowflade.lazy.lsp" },
+    { import = "shadowflade.lazy.db" },
+
     {
         "nvim-lua/plenary.nvim",
         name = "plenary"

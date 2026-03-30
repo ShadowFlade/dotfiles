@@ -39,7 +39,7 @@ vim.keymap.set("n", "<leader>=", vim.lsp.buf.format)
 --vim.keymap.set("n", "<leader>==", "<cmd>:Prettier<CR>", { noremap = true, silent = true })
 --next/prev error
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+--vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
@@ -61,9 +61,19 @@ vim.keymap.set("n", "<leader>e", ":lua vim.diagnostic.open_float(0, {scope='line
 --vim.keymap.set("n", "=", ":Prettier<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-b>", "");
 vim.keymap.set("n", "<C-t>", "<cmd>tabnew <CR>");
+--vim.keymap.set("n", "<C-w>", "<cmd>tabclose<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>q", "<cmd>tabclose<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>w", "<cmd>tabclose <CR>");
 vim.keymap.set("n", "<leader>fu", function()
     local word = vim.fn.expand('<cword>')
     vim.cmd('execute "vimgrep /' .. word .. '/ **/*"')
     vim.cmd('copen')
 end)
+-- vim.keymap.set("n", "<C-j>", function()
+--     vim.cmd.vnew()
+--     vim.cmd.term()
+--     vim.cmd.wincmd('J')
+--     vim.api.nvim_win_set_height(0, 5);
+-- end)
+
+vim.keymap.set("n", "<leader>-", "<cmd>let @+ = expand('%:p')<CR>", { noremap = true, silent = true })

@@ -19,6 +19,7 @@ fi
 
 
 alias vim="nvim"
+alias v="nvim"
 alias actually_vim="/usr/bin/vim.tiny"
 alias tmux-sessionizer="~/.local/bin/scripts/tmux-sessionizer"
 alias go="/usr/local/go/bin/go"

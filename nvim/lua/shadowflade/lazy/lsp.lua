@@ -1,4 +1,5 @@
 return {
+  {
     "neovim/nvim-lspconfig",
     dependencies = {
         "williamboman/mason.nvim",
@@ -35,6 +36,8 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "phpactor",
+                -- JS/TS (typescript-language-server; работает и для обычного JavaScript)
+                "ts_ls",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -98,4 +101,5 @@ return {
              hi link @tag.attribute.html type
         ]]
     end
+  },
 }
