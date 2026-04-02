@@ -1,6 +1,8 @@
 return {
     { import = "shadowflade.lazy.lsp" },
     { import = "shadowflade.lazy.db" },
+    { import = "shadowflade.lazy.treesitter" },
+    { import = "shadowflade.lazy.neogen" },
 
     {
         "nvim-lua/plenary.nvim",
