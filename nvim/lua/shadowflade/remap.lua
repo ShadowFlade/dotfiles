@@ -77,3 +77,5 @@ end)
 -- end)
 
 vim.keymap.set("n", "<leader>-", "<cmd>let @+ = expand('%:p')<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-S-PageUp>", "<cmd>tabm -1<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-S-PageDown>", "<cmd>tabm +1<CR>", { noremap = true, silent = true })

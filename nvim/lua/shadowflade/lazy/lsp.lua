@@ -12,14 +12,8 @@ return {
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
+        "ray-x/lsp_signature.nvim",
     },
-    opts = {
-        inlay_hints = { enabled = true },
-    },
-
-    on_attach = function(client, bufnr)
-        vim.lsp.buf.inlay_hint(bufnr, true)
-    end,
     config = function()
         local cmp = require('cmp')
         local cmp_lsp = require("cmp_nvim_lsp")
@@ -29,6 +23,27 @@ return {
             vim.lsp.protocol.make_client_capabilities(),
             cmp_lsp.default_capabilities()
         )
+
+        --- Runs for every LSP client (lazy.nvim ignores top-level `on_attach` on this spec).
+        local function on_attach(client, bufnr)
+            pcall(vim.lsp.buf.inlay_hint, bufnr, true)
+            require("lsp_signature").on_attach({
+                bind = true,
+                hint_enable = false,
+                handler_opts = { border = "rounded" },
+                floating_window = true,
+                floating_window_above_cur_line = true,
+                fix_pos = false,
+                max_height = 12,
+                max_width = 80,
+                extra_trigger_chars = { "(", "," },
+            }, bufnr)
+        end
+
+        require("lsp_signature").setup({
+            floating_window = true,
+            hint_enable = false,
+        })
 
         require("fidget").setup({})
         require("mason").setup()
@@ -42,7 +57,8 @@ return {
             handlers = {
                 function(server_name) -- default handler (optional)
                     require("lspconfig")[server_name].setup {
-                        capabilities = capabilities
+                        capabilities = capabilities,
+                        on_attach = on_attach,
                     }
                 end,
 
@@ -50,6 +66,7 @@ return {
                     local lspconfig = require("lspconfig")
                     lspconfig.lua_ls.setup {
                         capabilities = capabilities,
+                        on_attach = on_attach,
                         settings = {
                             Lua = {
                                 diagnostics = {

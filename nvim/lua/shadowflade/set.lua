@@ -43,3 +43,7 @@ vim.opt.listchars:append({ precedes = '>' })
 vim.g.loaded_netrw = 0
 vim.g.loaded_netrwPlugin = 0
 vim.opt.termguicolors = true
+vim.opt.foldmethod = "indent"   -- or "expr"/"syntax" if you prefer
+vim.opt.foldlevel = 99          -- start with folds open
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
