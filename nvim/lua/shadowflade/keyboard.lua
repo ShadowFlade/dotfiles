@@ -1,9 +1,8 @@
--- Normal/Visual: only US (hjkl / leader work). Insert: restore RU or US.
--- Matches i3 setxkbmap line. Does not use IBus or xdotool.
+-- Normal/Visual: US only (hjkl / leader). Insert: restore last Insert layout (RU/US).
+-- Track layout via Cyrillic/Latin input and Alt+Shift in Insert.
 
 local M = {}
 
--- Keep in sync with i3/config exec_always setxkbmap ...
 local LAYOUT_US_ONLY = "setxkbmap -model pc105 -layout us"
 local LAYOUT_US_DEFAULT = "setxkbmap -model pc105 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
 local LAYOUT_RU_DEFAULT = "setxkbmap -model pc105 -layout ru,us -variant ,, -option grp:alt_shift_toggle"
@@ -16,36 +15,16 @@ local function run(cmd)
     return vim.v.shell_error == 0
 end
 
-local function force_us()
-    run(LAYOUT_US_ONLY)
-    vim.g.kb_layout = "us"
-end
-
 local function apply_layout(name)
     if name == "ru" then
         run(LAYOUT_RU_DEFAULT)
-        vim.g.kb_layout = "ru"
     else
         run(LAYOUT_US_DEFAULT)
-        vim.g.kb_layout = "us"
     end
 end
 
-local function layout_to_restore()
-    if vim.b.insert_used_cyrillic or vim.g.kb_layout == "ru" then
-        return "ru"
-    end
-    return "us"
-end
-
-local function save_and_switch_to_us()
-    vim.g.kb_restore_layout = layout_to_restore()
-    force_us()
-    vim.b.insert_used_cyrillic = false
-end
-
-local function restore_saved()
-    apply_layout(vim.g.kb_restore_layout or "ru")
+local function force_us()
+    run(LAYOUT_US_ONLY)
 end
 
 local function in_insert_like_mode()
@@ -61,8 +40,32 @@ local function char_is_cyrillic(char)
     return (cp >= 0x0400 and cp <= 0x04FF) or (cp >= 0x0500 and cp <= 0x052F)
 end
 
+local function char_is_latin(char)
+    if not char or char == "" then
+        return false
+    end
+    local cp = vim.fn.char2nr(char)
+    return (cp >= 0x41 and cp <= 0x5A) or (cp >= 0x61 and cp <= 0x7A)
+end
+
+local function set_insert_layout(name)
+    vim.b.kb_insert_layout = name
+    apply_layout(name)
+end
+
+local function restore_insert_layout()
+    local layout = vim.g.kb_restore_layout or "us"
+    vim.b.kb_insert_layout = layout
+    apply_layout(layout)
+end
+
+local function save_and_leave_insert()
+    vim.g.kb_restore_layout = vim.b.kb_insert_layout or "us"
+    force_us()
+end
+
 function M.setup()
-    vim.g.kb_layout = vim.g.kb_layout or "us"
+    vim.g.kb_restore_layout = vim.g.kb_restore_layout or "us"
 
     if vim.fn.executable("setxkbmap") ~= 1 then
         vim.notify("keyboard.lua: setxkbmap not found", vim.log.levels.WARN)
@@ -75,22 +78,22 @@ function M.setup()
         group = aug,
         callback = function()
             if char_is_cyrillic(vim.v.char) then
-                vim.b.insert_used_cyrillic = true
-                vim.g.kb_layout = "ru"
+                vim.b.kb_insert_layout = "ru"
+            elseif char_is_latin(vim.v.char) then
+                vim.b.kb_insert_layout = "us"
             end
         end,
     })
 
     vim.api.nvim_create_autocmd("InsertLeave", {
         group = aug,
-        callback = save_and_switch_to_us,
+        callback = save_and_leave_insert,
     })
 
     vim.api.nvim_create_autocmd("InsertEnter", {
         group = aug,
         callback = function()
-            vim.b.insert_used_cyrillic = false
-            vim.schedule(restore_saved)
+            vim.schedule(restore_insert_layout)
         end,
     })
 
@@ -103,20 +106,17 @@ function M.setup()
         group = aug,
         callback = function()
             if in_insert_like_mode() then
-                vim.schedule(restore_saved)
+                vim.schedule(restore_insert_layout)
             end
         end,
     })
 
-    -- Other apps need us,ru; nvim Normal needs layout us only for keymaps
     vim.api.nvim_create_autocmd("FocusLost", {
         group = aug,
         callback = function()
-            if in_insert_like_mode() then
-                return
+            if not in_insert_like_mode() then
+                run(LAYOUT_US_DEFAULT)
             end
-            run(LAYOUT_US_DEFAULT)
-            vim.g.kb_layout = "us"
         end,
     })
 
@@ -124,12 +124,17 @@ function M.setup()
         group = aug,
         callback = function()
             if in_insert_like_mode() then
-                vim.schedule(restore_saved)
+                vim.schedule(restore_insert_layout)
             else
                 force_us()
             end
         end,
     })
+
+    vim.keymap.set("i", "<A-S>", function()
+        local next_layout = (vim.b.kb_insert_layout == "ru") and "us" or "ru"
+        set_insert_layout(next_layout)
+    end, { desc = "Toggle keyboard layout in Insert" })
 end
 
 return M

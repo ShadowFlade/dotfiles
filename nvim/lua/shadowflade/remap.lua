@@ -28,7 +28,12 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- deletes into void
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
+-- US layout; same physical keys on JCUKEN (RU)
 vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("i", "<C-с>", "<Esc>")
+vim.keymap.set("i", "<C-С>", "<Esc>")
+vim.keymap.set("i", "<C-ц>", "<C-w>")
+vim.keymap.set("i", "<C-Ц>", "<C-w>")
 -- disables Q
 vim.keymap.set("n", "Q", "<nop>")
 -- TODO set my own tmux hotkey
@@ -109,6 +114,7 @@ end)
 --     vim.api.nvim_win_set_height(0, 5);
 -- end)
 
+-- get current file path
 vim.keymap.set("n", "<leader>-", "<cmd>let @+ = expand('%:p')<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-S-PageUp>", "<cmd>tabm -1<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-S-PageDown>", "<cmd>tabm +1<CR>", { noremap = true, silent = true })
