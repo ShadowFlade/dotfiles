@@ -35,7 +35,15 @@ vim.keymap.set("n", "Q", "<nop>")
 --vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
-vim.keymap.set("n", "<leader>=", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>=", function()
+    local ok, conform = pcall(require, "conform")
+    if ok then
+        -- Uses formatters_by_ft when set; otherwise falls back to LSP (same as other languages)
+        conform.format({ bufnr = 0, async = false, lsp_fallback = true })
+        return
+    end
+    vim.lsp.buf.format()
+end)
 --vim.keymap.set("n", "<leader>==", "<cmd>:Prettier<CR>", { noremap = true, silent = true })
 --next/prev error
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -61,9 +69,34 @@ vim.keymap.set("n", "<leader>e", ":lua vim.diagnostic.open_float(0, {scope='line
 --vim.keymap.set("n", "=", ":Prettier<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-b>", "");
 vim.keymap.set("n", "<C-t>", "<cmd>tabnew <CR>");
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "qf",
+    callback = function(args)
+        vim.keymap.set("n", "<C-t>", function()
+            local qf = vim.fn.getqflist({ idx = 0, items = 0 })
+            local item = qf.items and qf.items[qf.idx] or nil
+            if not item then
+                return
+            end
+
+            vim.cmd("tabnew")
+            if item.bufnr and item.bufnr > 0 then
+                vim.api.nvim_set_current_buf(item.bufnr)
+            elseif item.filename and item.filename ~= "" then
+                vim.cmd("edit " .. vim.fn.fnameescape(item.filename))
+            else
+                return
+            end
+
+            if item.lnum and item.lnum > 0 then
+                vim.api.nvim_win_set_cursor(0, { item.lnum, math.max((item.col or 1) - 1, 0) })
+            end
+        end, { buffer = args.buf, silent = true, desc = "Open quickfix item in new tab" })
+    end,
+})
 --vim.keymap.set("n", "<C-w>", "<cmd>tabclose<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>q", "<cmd>tabclose<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>w", "<cmd>tabclose <CR>");
+--vim.keymap.set("n", "<leader>w", "<cmd>tabclose <CR>");
 vim.keymap.set("n", "<leader>fu", function()
     local word = vim.fn.expand('<cword>')
     vim.cmd('execute "vimgrep /' .. word .. '/ **/*"')

@@ -3,6 +3,7 @@ return {
     { import = "shadowflade.lazy.db" },
     { import = "shadowflade.lazy.treesitter" },
     { import = "shadowflade.lazy.neogen" },
+    { import = "shadowflade.lazy.comfort" },
 
     {
         "nvim-lua/plenary.nvim",

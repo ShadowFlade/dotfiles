@@ -1,9 +1,10 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
-Name=Obsidian
+Name=Obsidian_test
 Exec=/home/shadowflade/Desktop/apps/Obsidian-1.6.7.AppImage
 Icon=obsidian
 Type=Application
 Terminal=false
 Categories=Utility;
 MimeType=x-scheme-handler/obsidian;
+

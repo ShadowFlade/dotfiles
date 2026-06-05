@@ -76,6 +76,18 @@ return {
                         }
                     }
                 end,
+
+                ["phpactor"] = function()
+                    require("lspconfig").phpactor.setup {
+                        capabilities = capabilities,
+                        on_attach = on_attach,
+                        -- Maps to Phpactor config; enables textDocument/formatting via php-cs-fixer
+                        -- https://phpactor.readthedocs.io/en/master/integrations/php-cs-fixer.html
+                        init_options = {
+                            ["language_server_php_cs_fixer.enabled"] = true,
+                        },
+                    }
+                end,
             }
         })
 

@@ -49,7 +49,7 @@ floating_modifier $mod
 #bindsym $mod+Return exec i3-sensible-terminal
 # currently will be using this until figure out bug with fonts in the terminal (i3-sensible-terminal ? rather tmux)
 #bindsym $mod+Return exec gnome-terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec ghostty
 
 # kill focused window
 bindsym $mod+q kill
