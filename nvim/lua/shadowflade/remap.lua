@@ -122,3 +122,4 @@ vim.keymap.set("n", "<C-PageDown>", "<cmd>tabnext<CR>", { noremap = true, silent
 vim.keymap.set("n", "<C-PageUp>", "<cmd>tabprev<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-Left>", "<cmd>tabprev<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-Right>", "<cmd>tabnext<CR>", { noremap = true, silent = true })
+vim.opt.keywordprg = ":help"

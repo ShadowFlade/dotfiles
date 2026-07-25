@@ -1,5 +1,6 @@
 
 put tmux config into /etc/tmux.conf
+install gopls through :Mason
 ### TODO
 
 add additional packages to install on prompt:
