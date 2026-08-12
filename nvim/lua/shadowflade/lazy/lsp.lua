@@ -53,6 +53,7 @@ return {
                 "phpactor",
                 -- JS/TS (typescript-language-server; работает и для обычного JavaScript)
                 "ts_ls",
+                "ols", -- Odin Language Server (signature help, hover, etc.)
             },
             handlers = {
                 function(server_name) -- default handler (optional)
