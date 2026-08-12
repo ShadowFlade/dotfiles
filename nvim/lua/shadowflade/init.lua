@@ -1,6 +1,5 @@
 require("shadowflade.set")
 require("shadowflade.remap")
-require("shadowflade.keyboard").setup()
 require("shadowflade.lazy_init")
 
 local augroup = vim.api.nvim_create_augroup
