@@ -1,11 +1,115 @@
 <templateSet group="PHP">
-  <template name="log" value="echo &quot;&lt;pre&gt;&quot;;&#10;print_r($VAR$) . &quot;\n&quot;;&#10;echo &quot;&lt;pre/&gt;&lt;br/&gt;&quot;;" description="" toReformat="false" toShortenFQNames="true">
+  <template name="log_ip" value="if ($_SERVER['REMOTE_ADDR'] == '176.213.173.181') {&#10;    echo '&lt;pre&gt;';&#10;    print_r($VAR$);&#10;    echo '&lt;/pre&gt;';&#10;}" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
     <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="debug" value="\Bitrix\Main\Diag\Debug::writeToFile(&#10;    $VAR$,&#10;    date(&quot;d.m.Y H:i:s&quot;),&#10;    &quot;local/log.log&quot;&#10;);&#10;" description="" toReformat="true" toShortenFQNames="true">
+  <template name="fore" value="foreach ($ITERABLE$ as $VAR_VALUE$) {&#10;    $END$&#10;}" description="foreach(iterable_expr as $value) {...}" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="ITERABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR_VALUE" expression="phpSuggestVariableName()" defaultValue="&quot;$item&quot;" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="forek" value="foreach ($ITERABLE$ as $VAR_KEY$ =&gt; $VAR_VALUE$) {&#10;    $END$&#10;}" description="foreach(iterable_expr as $key =&gt; $value) {...}" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="ITERABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR_KEY" expression="phpSuggestVariableName()" defaultValue="&quot;$index&quot;" alwaysStopAt="true" />
+    <variable name="VAR_VALUE" expression="phpSuggestVariableName()" defaultValue="&quot;$item&quot;" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="thr" value="throw new $END$" description="throw new" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <context />
+  </template>
+  <template name="eco" value="echo &quot;$END$&quot;;" description="'echo' statement" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <context />
+  </template>
+  <template name="rqr" value="require &quot;$END$&quot;;" description="'require' statement" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <context />
+  </template>
+  <template name="rqro" value="require_once &quot;$END$&quot;;" description="'require_once' statement" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <context />
+  </template>
+  <template name="inc" value="include &quot;$END$&quot;;" description="'include' statement" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <context />
+  </template>
+  <template name="inco" value="include_once &quot;$END$&quot;;" description="'include_once' statement" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <context />
+  </template>
+  <template name="pubf" value="public function $NAME$($PARAMETERS$){&#10;    $END$&#10;}" description="public function" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMETERS" expression="phpVar" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="pubsf" value="public static function $NAME$($PARAMETERS$){&#10;    $END$&#10;}" description="public static function" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMETERS" expression="phpVar" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="prof" value="protected function $NAME$($PARAMETERS$){&#10;    $END$&#10;}" description="protected function" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMETERS" expression="phpVar" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="prosf" value="protected static function $NAME$($PARAMETERS$){&#10;    $END$&#10;}" description="protected static function" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMETERS" expression="phpVar" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="prif" value="private function $NAME$($PARAMETERS$){&#10;    $END$&#10;}" description="private function" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMETERS" expression="phpVar" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="prisf" value="private static function $NAME$($PARAMETERS$){&#10;    $END$&#10;}" description="private static function" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMETERS" expression="phpVar" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="classFQN" value="$CLASS_FQN$" description="current class FQN" toReformat="false" toShortenFQNames="false" deactivated="true">
+    <variable name="CLASS_FQN" expression="phpQualifiedClassName()" defaultValue="" alwaysStopAt="false" />
+    <context />
+  </template>
+  <template name="className" value="$CLASS_NAME$" description="current class name" toReformat="false" toShortenFQNames="false" deactivated="true">
+    <variable name="CLASS_NAME" expression="phpClassName()" defaultValue="" alwaysStopAt="false" />
+    <context />
+  </template>
+  <template name="fun" value="function $NAME$($PARAMETERS$){&#10;    $END$&#10;}" description="function" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMETERS" expression="phpVar" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="fori" value="for($INDEX$ = 0; $INDEX$ &lt; $LIMIT$; $INDEX$++) {&#10;  $END$&#10;}" description="Create iteration loop" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="INDEX" expression="phpSuggestVariableName()" defaultValue="&quot;$i&quot;" alwaysStopAt="true" />
+    <variable name="LIMIT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="t" value="$this-&gt;" description="$this" toReformat="false" toShortenFQNames="false" deactivated="true">
+    <context />
+  </template>
+  <template name="ctor" value="function __construct($PARAMETERS$) {&#10;    $END$&#10;}" description="constructor" toReformat="true" toShortenFQNames="false" deactivated="true">
+    <variable name="PARAMETERS" expression="phpVar" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="pf" value="public function $NAME$($PARAMETERS$) {&#10;    $END$&#10;}" description="public function" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMETERS" expression="phpVar" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="prf" value="private function $NAME$($PARAMETERS$){&#10;    $END$&#10;}" description="private function" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMETERS" expression="phpVar" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="ps" value="public static $END$" description="public static" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <context />
+  </template>
+  <template name="debug" value="\Bitrix\Main\Diag\Debug::dumpToFile(&#10;    [&#10;        $VAR$    &#10;    ],&#10;    date(&quot;d.m.Y H:i:s&quot;),&#10;    'local/$VAR1$.log'&#10;);" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="log" value="echo '&lt;pre&gt;';&#10;print_r($VAR$);&#10;echo '&lt;/pre&gt;&lt;br&gt;';" description="" toReformat="true" toShortenFQNames="true">
     <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />

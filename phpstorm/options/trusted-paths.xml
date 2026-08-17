@@ -1,0 +1,49 @@
+<application>
+  <component name="Trusted.Paths">
+    <option name="TRUSTED_PROJECT_PATHS">
+      <map>
+        <entry key="$USER_HOME$/Desktop/personal/projects" value="true" />
+        <entry key="$USER_HOME$/Desktop/personal/projects/isthatabook" value="true" />
+        <entry key="$USER_HOME$/Desktop/personal/projects/oh-my-timers" value="true" />
+        <entry key="$USER_HOME$/Desktop/personal/projects/pacaniupali" value="true" />
+        <entry key="$USER_HOME$/Desktop/work" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/bakery_test" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/php-servers" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/php_interface/webgk" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/smisl" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/smisl/ultralinzi" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/smisl/ultralinzi-new-back-master" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/smisl/ultralinzi/ultralinzi-new-front" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/spider" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/spider/ESEF" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/spider/etp-backend" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/spider/kaplife_front" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/webgk_projects_original" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/webgk_projects_original/allureparfum" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/webgk_projects_original/sgifts-new" value="true" />
+        <entry key="$USER_HOME$/Desktop/work/webgk_projects_original/smail-shop" value="true" />
+        <entry key="$USER_HOME$/Downloads/docker" value="true" />
+        <entry key="$USER_HOME$/Downloads/notifications-archive" value="true" />
+        <entry key="/srv/bitrix-server" value="true" />
+        <entry key="/srv/bitrix-server/sites/hleb.real.ru" value="true" />
+        <entry key="/srv/bitrix-server/sites/hleb.ru" value="true" />
+        <entry key="/srv/bitrix-server/sites/hleb.ru/www" value="true" />
+        <entry key="/srv/bitrix-server/sites/kaplife.ru" value="true" />
+        <entry key="/srv/bitrix-server/sites/kaplife.ru/www" value="true" />
+        <entry key="/srv/bitrix-server/sites/sgifts.ru" value="true" />
+        <entry key="/srv/bitrix-server/sites/test.example.com" value="true" />
+        <entry key="/srv/bitrix-server/sites/test.example.ru" value="true" />
+        <entry key="/srv/bitrix-server/sites/ultralinzi-back" value="true" />
+        <entry key="/srv/bitrix-server/sites/ultralinzi-back/www" value="true" />
+        <entry key="/srv/bitrix-server/sites/ultralinzi-back/www/ultralinzi_back" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="Trusted.Paths.Settings">
+    <option name="TRUSTED_PATHS">
+      <list>
+        <option value="$USER_HOME$/Desktop" />
+      </list>
+    </option>
+  </component>
+</application>

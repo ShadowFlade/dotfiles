@@ -1,0 +1,10 @@
+<application>
+  <component name="LocalDatabaseDriverManager" version="201">
+    <driver id="mysql.8">
+      <artifact id="MySQL ConnectorJ" name="MySQL ConnectorJ" use="true" version="9.5.0" />
+    </driver>
+    <driver id="postgresql">
+      <artifact id="PostgreSQL" name="PostgreSQL" use="true" version="42.7.3" />
+    </driver>
+  </component>
+</application>

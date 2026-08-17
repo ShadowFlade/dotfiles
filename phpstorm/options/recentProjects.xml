@@ -1,0 +1,505 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="/srv/bitrix-server/sites/test.example.com">
+          <value>
+            <RecentProjectMetaInfo frameTitle="test.example.com – docker-compose.yml" projectWorkspaceId="36A5BR6osUQhUd0GKYjw96Pyxc0">
+              <option name="activationTimestamp" value="1764442024648" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-252.28238.9" />
+              <option name="buildTimestamp" value="1763609040000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <frame x="1918" y="-18" width="1924" height="1081" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1764436399160" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/personal/projects/isthatabook">
+          <value>
+            <RecentProjectMetaInfo frameTitle="isthatabook – .gitignore" projectWorkspaceId="387AoI9HWJmpll01hrKv9K7uzLJ">
+              <option name="activationTimestamp" value="1768228909679" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-252.28238.9" />
+              <option name="buildTimestamp" value="1763609040000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="2" />
+              </option>
+              <frame x="1918" y="-16" width="1924" height="1080" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1768140408132" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/personal/projects/oh-my-timers">
+          <value>
+            <RecentProjectMetaInfo frameTitle="oh-my-timers – readme.md" projectWorkspaceId="38CTTqbnbKKqdOnaatvlqdSHTTL">
+              <option name="activationTimestamp" value="1768302591916" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-252.28238.9" />
+              <option name="buildTimestamp" value="1763609040000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="4" />
+              </option>
+              <frame x="1918" y="16" width="1924" height="1048" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1768302563885" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/php-servers">
+          <value>
+            <RecentProjectMetaInfo frameTitle="php-servers – server-200.php" projectWorkspaceId="39blQgUzKkjcMLIwuAg3NK5Myj9">
+              <option name="activationTimestamp" value="1771326672552" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-252.28238.9" />
+              <option name="buildTimestamp" value="1763609040000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="7" />
+              </option>
+              <frame x="1918" y="32" width="1924" height="1032" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1770972636427" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/srv/bitrix-server/sites/test.example.ru">
+          <value>
+            <RecentProjectMetaInfo frameTitle="test.example.ru – .env" projectWorkspaceId="39nL9GJ6TuhQOqOjiBy3Ikr6m4c">
+              <option name="activationTimestamp" value="1771352346889" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-252.28238.9" />
+              <option name="buildTimestamp" value="1763609040000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <frame x="1918" y="48" width="1924" height="1016" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1771334856122" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/bakery_test">
+          <value>
+            <RecentProjectMetaInfo frameTitle="bakery_test – dishes.php" projectWorkspaceId="39pxEJY9eyQOVck278LPahYzrlU">
+              <option name="activationTimestamp" value="1771583522595" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-252.28238.9" />
+              <option name="buildTimestamp" value="1763609040000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="3" />
+              </option>
+              <frame x="1918" y="32" width="1924" height="1032" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1771497969208" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/srv/bitrix-server/sites/sgifts.ru">
+          <value>
+            <RecentProjectMetaInfo frameTitle="sgifts.ru" projectWorkspaceId="39pj0jxIONq4mdL16ouhMaoYqjw">
+              <option name="activationTimestamp" value="1772452497921" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-252.28238.9" />
+              <option name="buildTimestamp" value="1763609040000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="1" />
+              </option>
+              <frame x="1918" y="16" width="1924" height="1048" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1772452478220" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/webgk_projects_original/sgifts-new">
+          <value>
+            <RecentProjectMetaInfo frameTitle="sgifts-new – class.php" projectWorkspaceId="39pj3KcqnFIQBYGuJIfKOVe5RKD">
+              <option name="activationTimestamp" value="1772730480634" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-252.28238.9" />
+              <option name="buildTimestamp" value="1763609040000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="2" />
+              </option>
+              <frame x="1918" y="32" width="1924" height="1032" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1772722729020" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/php_interface/webgk">
+          <value>
+            <RecentProjectMetaInfo frameTitle="webgk – config.php" projectWorkspaceId="3AqVzSdefIAASDgX4FCavjaL35l">
+              <option name="activationTimestamp" value="1773320501887" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-253.31033.138" />
+              <option name="buildTimestamp" value="1771492860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <frame x="1918" y="16" width="1924" height="1048" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1773320349125" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/webgk_projects_original/smail-shop">
+          <value>
+            <RecentProjectMetaInfo frameTitle="smail-shop – README.md" projectWorkspaceId="3AqWS2xgDOLX9AItzAXEoLupW2b">
+              <option name="activationTimestamp" value="1773320576371" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-253.31033.138" />
+              <option name="buildTimestamp" value="1771492860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="6" />
+              </option>
+              <frame x="1918" y="16" width="1924" height="1048" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1773320576434" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/webgk_projects_original">
+          <value>
+            <RecentProjectMetaInfo frameTitle="webgk_projects_original – .left.menu_ext.php" projectWorkspaceId="36KIh8E8yP5XSPNn5gh0MAWhqci">
+              <option name="activationTimestamp" value="1773699167206" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-253.31033.138" />
+              <option name="buildTimestamp" value="1771492860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="7" />
+              </option>
+              <frame x="1918" y="16" width="1924" height="1048" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1773699160311" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/smisl/ultralinzi-new-back-master">
+          <value>
+            <RecentProjectMetaInfo frameTitle="ultralinzi-new-back-master" projectWorkspaceId="3BRtSyGNNLzBbILVdjFOH23ueaC">
+              <option name="activationTimestamp" value="1774467665206" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-253.31033.138" />
+              <option name="buildTimestamp" value="1771492860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <frame x="1918" y="32" width="1924" height="1032" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1774463713969" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/docker">
+          <value>
+            <RecentProjectMetaInfo frameTitle="docker – docker-compose.yml" projectWorkspaceId="3BWrnMPItTcYvqfSsOW5ZZfgJWa">
+              <option name="activationTimestamp" value="1774819735725" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-253.31033.138" />
+              <option name="buildTimestamp" value="1771492860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="1" />
+              </option>
+              <frame x="2880" y="-14" width="960" height="1076" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1774615832301" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/srv/bitrix-server/sites/kaplife.ru/www">
+          <value>
+            <RecentProjectMetaInfo frameTitle="www – BirthDayList.php" projectWorkspaceId="3CI9Bh2v4OoAInOgyJZ7EjMWKhP">
+              <option name="activationTimestamp" value="1776078794292" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-253.31033.138" />
+              <option name="buildTimestamp" value="1771492860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="2" />
+              </option>
+              <frame x="1918" y="32" width="1924" height="1032" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1776062082887" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/personal/projects/pacaniupali">
+          <value>
+            <RecentProjectMetaInfo frameTitle="pacaniupali – GroupInvitesSettingsTab.tsx" projectWorkspaceId="394PHn7Q4KOA8jwlsGHurwNPfQm">
+              <option name="activationTimestamp" value="1776150288461" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-253.31033.138" />
+              <option name="buildTimestamp" value="1771492860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="6" />
+              </option>
+              <frame x="1918" y="-16" width="1924" height="1080" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1776098810392" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/srv/bitrix-server/sites/hleb.ru/www">
+          <value>
+            <RecentProjectMetaInfo frameTitle="www – local/…/README.md" projectWorkspaceId="3ANkhugA8FV0L8OBVMbhmyvjILo">
+              <option name="activationTimestamp" value="1776164430163" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-253.31033.138" />
+              <option name="buildTimestamp" value="1771492860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="4" />
+              </option>
+              <frame x="1918" y="-16" width="1924" height="1080" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1776150289710" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/smisl/ultralinzi/ultralinzi-new-front">
+          <value>
+            <RecentProjectMetaInfo frameTitle="ultralinzi-new-front – README.md" projectWorkspaceId="3CMuIDcBNBAwrWQtCa3Xrf1WN5e">
+              <option name="activationTimestamp" value="1776207988824" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-253.31033.138" />
+              <option name="buildTimestamp" value="1771492860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="4" />
+              </option>
+              <frame x="1918" y="-16" width="1924" height="1080" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1776207678131" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/spider/kaplife_front">
+          <value>
+            <RecentProjectMetaInfo frameTitle="kaplife_front – README.md" projectWorkspaceId="3CRqNwehf0P8XhOB1THquSX0yKn">
+              <option name="activationTimestamp" value="1776517351429" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-253.31033.138" />
+              <option name="buildTimestamp" value="1771492860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <frame x="1918" y="16" width="1924" height="1048" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1776358693659" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/smisl/ultralinzi">
+          <value>
+            <RecentProjectMetaInfo frameTitle="ultralinzi – certificate.php" projectWorkspaceId="3CIU1nQGEC5KSPiS6bmsxs9npCi">
+              <option name="activationTimestamp" value="1776695204795" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-253.31033.138" />
+              <option name="buildTimestamp" value="1771492860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="3" />
+              </option>
+              <frame x="1918" y="32" width="1924" height="1032" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1776694922239" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/smisl">
+          <value>
+            <RecentProjectMetaInfo frameTitle="smisl" projectWorkspaceId="3Bye8xdAuO0V55LGEwjX8RSa0QJ">
+              <option name="activationTimestamp" value="1776942695518" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-253.31033.138" />
+              <option name="buildTimestamp" value="1771492860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="7" />
+              </option>
+              <frame x="1918" y="32" width="1924" height="1032" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1776850742600" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/webgk_projects_original/allureparfum">
+          <value>
+            <RecentProjectMetaInfo frameTitle="allureparfum – Handler.php" projectWorkspaceId="38CbJpRo77b26qkdUo7aVCaEuk6">
+              <option name="activationTimestamp" value="1776969996420" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-253.31033.138" />
+              <option name="buildTimestamp" value="1771492860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <frame x="1918" y="16" width="1924" height="1048" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1776966954546" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/notifications-archive">
+          <value>
+            <RecentProjectMetaInfo frameTitle="notifications-archive – pushnotificationfile.md" projectWorkspaceId="3DMFJYrbY0CWn8HBw83NVGN3078">
+              <option name="activationTimestamp" value="1778086341334" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-261.23567.149" />
+              <option name="buildTimestamp" value="1776959400000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="7" />
+              </option>
+              <frame x="1918" y="16" width="1924" height="1048" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1778083960560" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/personal/projects">
+          <value>
+            <RecentProjectMetaInfo frameTitle="projects – &lt;shadowflade&gt; docker-compose.yml" projectWorkspaceId="36NvzeNf7hMHr3YgVzFn6gnG2nL">
+              <option name="activationTimestamp" value="1778340707205" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-261.23567.149" />
+              <option name="buildTimestamp" value="1776959400000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <frame x="1918" y="16" width="1924" height="1048" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1778270240302" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/srv/bitrix-server/sites/ultralinzi-back/www">
+          <value>
+            <RecentProjectMetaInfo frameTitle="www – usercases.php" projectWorkspaceId="3DGequX4RUrka4XaA7pFpruFpQF">
+              <option name="activationTimestamp" value="1781958678163" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-261.23567.149" />
+              <option name="buildTimestamp" value="1776959400000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="6" />
+              </option>
+              <frame x="1918" y="16" width="1924" height="1048" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1781861038684" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/spider/etp-backend">
+          <value>
+            <RecentProjectMetaInfo frameTitle="etp-backend – composer.json" projectWorkspaceId="3BTtYIMwhcGt7SCX1gFZcLdFkgk">
+              <option name="activationTimestamp" value="1783073945705" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-261.23567.149" />
+              <option name="buildTimestamp" value="1776959400000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="0" />
+              </option>
+              <frame x="1918" y="48" width="1924" height="1016" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1783073846143" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/srv/bitrix-server/sites/hleb.ru">
+          <value>
+            <RecentProjectMetaInfo frameTitle="hleb.ru – OrderFacade.php" projectWorkspaceId="39nbJ5afLyuPWYKdRtUMcikHEQX">
+              <option name="activationTimestamp" value="1786550029921" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-261.23567.149" />
+              <option name="buildTimestamp" value="1776959400000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="0" />
+              </option>
+              <frame x="1918" y="32" width="1924" height="1032" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1786458450573" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/srv/bitrix-server/sites/ultralinzi-back/www/ultralinzi_back">
+          <value>
+            <RecentProjectMetaInfo frameTitle="ultralinzi_back – dadataservice.php" projectWorkspaceId="3D2C7LLLSw9gdq3XxSBnDPNCqc8">
+              <option name="activationTimestamp" value="1786550060928" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-261.23567.149" />
+              <option name="buildTimestamp" value="1776959400000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="6" />
+              </option>
+              <frame x="1918" y="32" width="1924" height="1032" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1786549469714" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/srv/bitrix-server/sites/ultralinzi-back">
+          <value>
+            <RecentProjectMetaInfo frameTitle="ultralinzi-back" projectWorkspaceId="3Bye7AS7erbRoUkpNSLPMNDSeCH">
+              <option name="activationTimestamp" value="1786628834341" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-261.23567.149" />
+              <option name="buildTimestamp" value="1776959400000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="6" />
+              </option>
+              <frame x="1918" y="32" width="1924" height="1032" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1786550061757" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/work/spider/ESEF">
+          <value>
+            <RecentProjectMetaInfo frameTitle="ESEF – NReportFact.vue" projectWorkspaceId="3GG0p0GNLTvJ5xZDXflppzlhYLq">
+              <option name="activationTimestamp" value="1786952677694" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-261.23567.149" />
+              <option name="buildTimestamp" value="1776959400000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <frame x="1918" y="-16" width="1924" height="1080" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1786905219792" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/srv/bitrix-server/sites/hleb.real.ru">
+          <value>
+            <RecentProjectMetaInfo frameTitle="hleb.real.ru – AuthService.php" opened="true" projectWorkspaceId="3DdrOECi8DloAQE6vQgf9T3N2C0">
+              <option name="activationTimestamp" value="1786957497162" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-261.23567.149" />
+              <option name="buildTimestamp" value="1776959400000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <frame x="1918" y="-16" width="1924" height="1080" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1786952679175" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/srv/bitrix-server/sites/kaplife.ru">
+          <value>
+            <RecentProjectMetaInfo frameTitle="product_promo.php" opened="true" projectWorkspaceId="3AqfgUJirxtBgVPaG1l5zcKnuKR">
+              <option name="activationTimestamp" value="1786963468916" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-261.23567.149" />
+              <option name="buildTimestamp" value="1776959400000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="7" />
+              </option>
+              <frame x="1918" y="16" width="1924" height="1048" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1786954627303" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastOpenedProject" value="/srv/bitrix-server/sites/kaplife.ru" />
+  </component>
+</application>

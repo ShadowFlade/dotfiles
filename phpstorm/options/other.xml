@@ -1,0 +1,77 @@
+<application>
+  <component name="FileEditorProviderManager">{}</component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontSize" value="13.0" />
+    <option name="presentationModeIdeScale" value="1.75" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "NextRunPlatformUpdateBuild": "PS-261.27258.54",
+    "NextRunPlatformUpdateSelfBuild": "PS-261.23567.149",
+    "NextRunPlatformUpdateVersion": "2026.1.5",
+    "RunOnceActivity.AIPromoWindowAdvisorPreheat": "true",
+    "RunOnceActivity.PHP.Completion.Ranking.Disable.RunOnce": "true",
+    "RunOnceActivity.TerminalFontSettingsService.fixStoredNonMonospacedFonts": "true",
+    "RunOnceActivity.TerminalOptionsProvider.TerminalEngineMigration.2026.1": "true",
+    "RunOnceActivity.TerminalOptionsProvider.appTitleMigration.2026.1.1": "true",
+    "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
+    "RunOnceActivity.git.modal.commit.toggle": "true",
+    "RunOnceActivity.reset.auto.reparse.settings.to.default": "true",
+    "evlsprt3.261": "7",
+    "experimental.ui.on.first.startup": "true",
+    "experimental.ui.used.version": "261.23567.149",
+    "fileTypeChangedCounter": "1",
+    "fontSizeToResetConsole": "13.0",
+    "fontSizeToResetEditor": "13.0",
+    "git.working.trees.stop.showing.new.badge": "true",
+    "got.it.tooltip.trial.state.widget.trial.started.got.it.id": "1",
+    "gotit.previous.run": "PS-261.23567.149",
+    "ide.islands.ab3": "true",
+    "ide.islands.new.darcula": "true",
+    "input.method.disabler.muted": "true",
+    "llm.installer.last.toolwindow.state": "LLM_INSTALLER",
+    "previousColorScheme": "_@user_Dark",
+    "registry.to.advanced.settings.migration.build": "PS-261.23567.149",
+    "trial.state.free.trial.expiration.date": "1789506000000",
+    "trial.state.last.state": "ACTIVE",
+    "ts.lib.d.ts.version": "5.9.3",
+    "whats.new.last.shown.version": "2026-1.1-23567-8e11a3f0ab08673679c8c37fd575392b02025134"
+  },
+  "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/srv/bitrix-server/sites/kaplife.ru",
+      "/srv/bitrix-server/sites/hleb.real.ru",
+      "/home/shadowflade/Desktop/work/spider/ESEF"
+    ],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.database.vfs.DbStorageFileType$Detector",
+      "com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector",
+      "com.intellij.docker.dockerFile.DockerFileTypeDetector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+  <component name="ReworkedTerminalUsage"><![CDATA[{
+  "enterKeyPressedTimes": 39,
+  "firstIdeSessionMoment": {
+    "type": "org.jetbrains.plugins.terminal.TerminalFirstIdeSessionMoment.BeforeTrackingStarted"
+  }
+}]]></component>
+  <component name="ShownTips">{
+  &quot;shownTips&quot;: {
+    &quot;CtrlW&quot;: 1786905219196,
+    &quot;GoToDeclaration&quot;: 1786952684391,
+    &quot;ShowUsages&quot;: 1786815001354
+  },
+  &quot;proposedTips&quot;: {
+    &quot;CtrlW&quot;: 1786905218647,
+    &quot;GoToDeclaration&quot;: 1786952684322,
+    &quot;ShowUsages&quot;: 1786815001211
+  },
+  &quot;tipsOrderSeed&quot;: 1786815001199
+}</component>
+  <component name="TerminalAgentsState">{}</component>
+</application>

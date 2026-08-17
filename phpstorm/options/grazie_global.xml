@@ -1,0 +1,69 @@
+<application>
+  <component name="GraziConfig">
+    <option name="enabledLanguages">
+      <set>
+        <option value="English (US)" />
+        <option value="Russian" />
+      </set>
+    </option>
+    <option name="userDisabledRules">
+      <set>
+        <option value="LanguageTool.EN.OXFORD_SPELLING_Z_NOT_S" />
+        <option value="LanguageTool.EN.OXFORD_SPELLING_GRAM" />
+      </set>
+    </option>
+    <option name="domainDisabledRules">
+      <map>
+        <entry key="CodeDocumentation">
+          <value>
+            <set>
+              <option value="LanguageTool.RU.UPPERCASE_SENTENCE_START" />
+            </set>
+          </value>
+        </entry>
+        <entry key="CodeComment">
+          <value>
+            <set>
+              <option value="Grazie.RuleEngine.Ru.Spelling.LATIN_CYRILLIC_CONFUSION" />
+              <option value="LanguageTool.RU.Many_PNN" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="domainEnabledRules">
+      <map>
+        <entry key="CodeDocumentation">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="CodeComment">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="detectionContext">
+      <State>
+        <option name="disabled">
+          <set>
+            <option value="ROMANIAN" />
+          </set>
+        </option>
+      </State>
+    </option>
+    <option name="parametersPerDomain">
+      <map>
+        <entry key="CodeComment">
+          <value>
+            <map>
+              <entry key="RUSSIAN" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>

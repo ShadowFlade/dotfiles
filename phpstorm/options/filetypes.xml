@@ -1,0 +1,25 @@
+<application>
+  <component name="FileTypeManager" version="19">
+    <extensionMap>
+      <mapping pattern="ast" type="AUTO_DETECTED" />
+      <mapping pattern="id_rsa" type="AUTO_DETECTED" />
+      <mapping pattern="bitrix" type="AUTO_DETECTED" />
+      <mapping pattern="default" type="AUTO_DETECTED" />
+      <mapping pattern="oh-my-timers" type="AUTO_DETECTED" />
+      <mapping pattern="only" type="AUTO_DETECTED" />
+      <mapping pattern="gambler" type="AUTO_DETECTED" />
+      <mapping pattern="cron" type="AUTO_DETECTED" />
+      <mapping pattern="authorized_keys" type="AUTO_DETECTED" />
+      <mapping pattern="delulu" type="AUTO_DETECTED" />
+      <mapping pattern="known_hosts" type="AUTO_DETECTED" />
+      <mapping pattern=".settings.php.b2" type="PLAIN_TEXT" />
+      <mapping ext="cnf" type="PLAIN_TEXT" />
+      <mapping ext="config" type="PLAIN_TEXT" />
+      <mapping ext="db" type="PLAIN_TEXT" />
+      <mapping ext="go" type="PLAIN_TEXT" />
+      <mapping ext="service" type="PLAIN_TEXT" />
+      <mapping ext="pub" type="PLAIN_TEXT" />
+      <removed_mapping ext="log" approved="true" type="PLAIN_TEXT" />
+    </extensionMap>
+  </component>
+</application>

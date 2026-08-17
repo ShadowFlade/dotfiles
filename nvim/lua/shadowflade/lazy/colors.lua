@@ -3,7 +3,10 @@ function ColorMyPencils(color)
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	-- Solid float bg so LSP hover (K) / diagnostics are readable over transparent editor
+	local float_bg = "#1e2030"
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = float_bg })
+	vim.api.nvim_set_hl(0, "FloatBorder", { bg = float_bg })
 end
 
 return {
